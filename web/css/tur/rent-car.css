@@ -1,0 +1,120 @@
+.rent-car-grid{
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 1366px) 1fr;
+    grid-template-rows: 1fr;
+    background-color: #46e7e4;
+}
+
+.rent-car{
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr;
+}
+.rent-head{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    text-shadow: 4px 2px 4px gray;
+}
+.rent-box-1{
+    grid-row-start: 2;
+}
+.rent-box-2{
+     grid-row-start: 2;
+ }
+.rent-box-3{
+    grid-row-start: 2;
+}
+.rent-box-4{
+    grid-row-start: 2;
+}
+
+.img-car{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 10px auto;
+    box-shadow: 4px 2px 5px 0px rgba(0,0,0,0.6);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.car-label{
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+.car1{
+    background-image: url("/image/car/im1.jpg");
+}
+.car2{
+    background-image: url("/image/car/im2.jpg");
+}
+.car3{
+    background-image: url("/image/car/im3.jpg");
+}
+.car4{
+    background-image: url("/image/car/im4.jpg");
+
+}
+
+
+@media (max-width: 768px) {
+    .rent-car{
+        grid-column-start: 2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr;
+    }
+    .rent-head{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        font-size: 25px;
+    }
+
+    .rent-box-1{
+        grid-row-start: 2;
+    }
+    .rent-box-2{
+        grid-row-start: 2;
+    }
+    .rent-box-3{
+        grid-row-start: 3;
+    }
+    .rent-box-4{
+        grid-row-start: 3;
+    }
+}
+
+@media (max-width: 420px) {
+    .rent-car{
+        grid-column-start: 2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr;
+    }
+    .rent-head{
+        font-size: 23px;
+        grid-row-start: 1;
+    }
+
+    .rent-box-1{
+        grid-row-start: 2;
+    }
+    .rent-box-2{
+        grid-row-start: 3;
+    }
+    .rent-box-3{
+        grid-row-start: 4;
+    }
+    .rent-box-4{
+        grid-row-start: 5;
+    }
+}

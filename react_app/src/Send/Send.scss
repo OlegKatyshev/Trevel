@@ -1,0 +1,161 @@
+@import "../AppConfig.scss";
+
+.srv-request {
+
+  margin: 0px auto;
+  padding: 20px 0;
+  width: 95%;
+
+   span {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px #272727;
+    box-shadow: 1px 1px 2px #272727;
+     @include media(lphone){font-size: 14px;}
+  }
+
+  .err{
+    background-color: #ff6559;
+  }
+
+  .success{
+    background-color: #3cbd0e;
+  }
+}
+
+.send-req{
+  margin: 0 auto;
+  display: block;
+  width: 90%;
+  padding: 25px 0;
+  text-align: center;
+
+  .btn-send{
+    margin-top: 20px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #ffc20c;
+    transition: all 0.3s ease;
+    background-color: #ffc20c;
+    color: white;
+    text-shadow: 1px 1px 1px #272727;
+    box-shadow: 1px 1px 3px #272727;
+
+    &:hover, &:active{
+      border-color: #232323;
+      box-shadow: 1px 0px 5px #272727;
+      text-decoration: none;
+      outline: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+
+  .input-groups{
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .group-name{
+      flex-grow: 2;
+      padding: 10px 0;
+      flex-shrink: 0;
+      width: 100%;
+      position: relative;
+      label{
+        display: block;
+        font-size: 13px;
+        padding: 3px 0;
+        font-weight: bold;
+        &:focus {
+          text-decoration: none;
+          outline: none;
+        }
+      }
+
+      input {
+        display: inline-block;
+        width: 90%;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid grey;
+
+        @include media(lphone){width:80%}
+        &:focus {
+          text-decoration: none;
+          outline: none;
+        }
+      }
+    }
+    .group-phone{
+      flex-grow: 1;
+      padding: 10px 0;
+      position: relative;
+      label{
+        display: block;
+        font-size: 13px;
+        padding: 3px 0;
+        font-weight: bold;
+      }
+
+      input {
+        display: inline-block;
+        width: 80%;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        &:focus {
+          text-decoration: none;
+          outline: none;
+        }
+      }
+    }
+    .group-email{
+      flex-grow: 1;
+      padding: 10px 0;
+      position: relative;
+      label{
+        display: block;
+        font-size: 13px;
+        padding: 3px 0;
+        font-weight: bold;
+      }
+
+      input {
+        display: inline-block;
+        width: 80%;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid grey;
+        &:focus {
+          text-decoration: none;
+          outline: none;
+        }
+      }
+    }
+
+    .err-msg{
+      position: absolute;
+      font-size: 13px;
+      width: 100%;
+      bottom: -10px;
+      text-align: center;
+      color: red;
+    }
+  }
+}

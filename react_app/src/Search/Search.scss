@@ -1,0 +1,89 @@
+@import "../AppConfig.scss";
+
+.search{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  min-height: 160px;
+  padding: 110px 0px;
+
+  @include media(ipad) { width: 90%;}
+  @include media(ipad_min) {padding: 50px 0px;}
+  @include media(lphone-land) {padding: 50px 0px;}
+  @include media(lphone) { justify-content: left;}
+
+  .search-country{
+
+    width: 62.3%;
+    @include media(ipad) { width: 100%;}
+
+    min-width: 255px;
+    max-width: 510px;
+
+    .search-inp{
+      font-size: 15px;
+      padding: 9px 10px;
+      background-color: white;
+      border: 1px solid #575757;
+      border-radius: 5px;
+      color:black;
+      width: 74%;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+
+      @include media(lphone) {width: 70%; margin-right: 0px; margin-bottom: 20px; display: block}
+      @include media(lphone) {width: 70%; margin-right: 0px; margin-bottom: 20px; display: block}
+      @include media(mphone) {width: 80%;}
+      @include media(minphone) {width: 90%;}
+
+    }
+  }
+
+  label{
+    font-size: 14px;
+    padding: 10px 0;
+    vertical-align: top;
+    font-weight: bold;
+    display: block;
+  }
+
+  .err-msg{
+    font-size: 12px;
+    padding-top: 5px;
+    text-align: center;
+    vertical-align: top;
+    display: block;
+    color: red;
+  }
+
+  .btn-search{
+    padding: 10px 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #ffe419;
+    transition: all 0.3s ease;
+    background-color: #ffe419;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 0px 3px #272727;
+
+    &:hover, &:active{
+      border-color: #232323;
+      box-shadow: 1px 0px 5px black;
+      text-decoration: none;
+      outline: none;
+    }
+
+    &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+}
+

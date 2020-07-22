@@ -1,0 +1,61 @@
+@mixin head($color){
+
+  color: $color;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  font-size: 30px;
+
+  @media (max-width: 1024px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 415px) {
+    font-size: 23px;
+  }
+
+  @media (max-width: 375px) {
+
+  }
+
+  @media (max-width: 320px) {
+
+  }
+}
+
+@mixin media($media) {
+
+  @if $media == ipad {
+    @media only screen and (max-width: 1024px) { @content; }
+  }
+  @else if $media == ipad_min-land {
+    @media only screen and (orientation: landscape) and (max-width: 1024px) { @content; }
+  }
+  @else if $media == ipad_min {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @else if $media == lphone {
+    @media only screen and (max-width: 415px) { @content; }
+  }
+  @else if $media == mphone {
+    @media only screen and (max-width: 375px) { @content; }
+  }
+  @else if $media == minphone {
+    @media only screen and (max-width: 320px) { @content; }
+  }
+  @else if $media == lphone-land {
+    @media only screen and (orientation: landscape) and (max-width: 825px) { @content; }
+  }
+  @else if $media == mphone-land {
+    @media only screen and (orientation: landscape) and (max-width: 670px) { @content; }
+  }
+  @else if $media == minphone-land  {
+    @media only screen and (orientation: landscape) and (max-width: 570px) { @content; }
+  }
+
+}

@@ -1,0 +1,8 @@
+.search-grid{
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 1366px) 1fr;
+    grid-template-rows: 1fr;
+}
+.react-app{
+    grid-column-start: 2;
+}

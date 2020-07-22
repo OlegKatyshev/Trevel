@@ -1,0 +1,49 @@
+CREATE TABLE country ( 
+id SERIAL PRIMARY KEY, 
+name varchar(200) NOT NULL
+)
+
+CREATE TABLE city ( 
+id serial PRIMARY KEY, 
+name varchar(200) NOT NULL,
+id_country integer,
+FOREIGN KEY (id_country) REFERENCES country (id)
+)
+
+
+CREATE TABLE hotel ( 
+id SERIAL PRIMARY KEY, 
+name varchar(200) NOT NULL,
+id_city integer,
+id_country integer,
+street varchar(200),
+home smallint,
+phone varchar(20),
+stars smallint,
+gym boolean,
+spool boolean,
+parking boolean,
+beach boolean,
+line smallint,
+FOREIGN KEY (id_country) REFERENCES country (id),
+FOREIGN KEY (id_city ) REFERENCES city (id)
+)
+
+CREATE TABLE tur ( 
+id SERIAL PRIMARY KEY, 
+id_hotel integer,
+price money,
+food varchar(20),
+sell smallint,
+transfer boolean,
+date_s date,
+date_e date,
+CONSTRAINT sell CHECK (sell > -1 AND sell < 99),
+FOREIGN KEY (id_hotel) REFERENCES hotel (id)
+)
+
+CREATE TABLE image (
+id_hotel integer,
+name varchar(20),
+FOREIGN KEY (id_hotel) REFERENCES hotel (id)
+)

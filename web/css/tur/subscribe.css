@@ -1,0 +1,125 @@
+.subscribe-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 1366px) 1fr;
+    grid-template-rows: 1fr;
+}
+
+.subscribe-container {
+    grid-column-start: 2;
+    padding: 200px 0;
+}
+
+.subscribe-head {
+    font-size: 26px;
+    text-align: center;
+    padding: 15px  0 25px 0;
+    text-shadow: 4px 2px 4px gray;
+}
+
+.subscribe-head span{
+    font-size: 33px;
+    border-bottom: 3px solid red;
+}
+
+.subscribe-form{
+    width: 45%;
+    margin: 0 auto;
+}
+
+.inp-subscribe{
+    padding: 15px 10px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    color: black;
+    width: 85%;
+
+}
+
+.field-subscribeform-mail{
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    max-width: 480px;
+    height: 90px;
+    outline: none;
+    text-decoration: none;
+}
+.field-subscribeform-mail .help-block{
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px 0px;
+}
+.help-block-error{
+    color:red;
+}
+
+.btn-subscribe{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 13px 20px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    color: black;
+    background-color: whitesmoke;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-subscribe:hover{
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: black;
+}
+
+@media (max-width: 1366px){
+
+    .subscribe-container {
+        padding: 130px 0;
+    }
+}
+
+@media (max-width: 1024px){
+    .subscribe-form{
+        width: 60%;
+    }
+}
+@media (max-width: 823px){
+    .subscribe-form{
+        width: 75%;
+    }
+    .subscribe-container {
+        padding: 100px 0;
+    }
+}
+@media (max-width: 768px){
+    .subscribe-form{
+        width: 85%;
+    }
+}
+
+@media (max-width: 568px){
+    .subscribe-form{
+        width: 95%;
+    }
+
+}
+
+@media (max-width: 414px){
+    .subscribe-form{
+        width: 100%;
+        text-align: center;
+    }
+    .field-subscribeform-mail{
+        width: 100%;
+    }
+    .btn-subscribe{
+        padding: 20px;
+    }
+    .subscribe-head{
+        padding: 20px 0 25px 0;
+    }
+
+}
